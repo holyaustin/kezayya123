@@ -33,10 +33,9 @@ Live Dapp on Vercel: - https://kezayya123.vercel.app/
 Deployed to Polygon Mumbai: 
   export const fileShareAddress = "0x6936E43A3f9983875E32C967eB801686d51a6119"
 
-  Valist: https://app.valist.io/teamholyaustin/kezayya
-  Member: https://app.valist.io/addr/0xa6D6f4556B022c0C7051d62E071c0ACecE5a1228
-
-Youtube video link: https://youtu.be/4hIymL5lCs0
+  Valist: https://app.valist.io/holyaustin/kezayya123
+ 
+ Youtube video link: https://youtu.be/4hIymL5lCs0
 
 ## Getting Started
 
