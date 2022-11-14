@@ -100,11 +100,7 @@ const MintFile = () => {
 
   const previewNFT = (metaData, mintNFTTx) => {
     console.log("getIPFSGatewayURL2 two is ...");
-    //const imgViewString = getIPFSGatewayURL(metaData.data.image.pathname);
-    //console.log("image ipfs path is", imgViewString);
-    //setImageView(imgViewString);
     setMetaDataURl(getIPFSGatewayURL(metaData));
-    //setTxURL(`https://mumbai.polygonscan.com/tx/${mintNFTTx.hash}`);
     setTxStatus("File addition was successfully!");
     console.log("Preview details completed");
   };
@@ -144,7 +140,7 @@ const MintFile = () => {
             className="mt-5 border rounded p-4 text-xl"
             onChange={(e) => updateFormInput({ ...formInput, name: e.target.value })}
           />
-          <div className="MintNFT text-black text-xl text-black">
+          <div className="MintNFT text-xl text-black">
             <form>
               <h3>Select a Folder</h3>
               <input type="file" multiple directory="" mozdirectory=""  webkitdirectory='true' onChange={handleFileUpload} className="text-black mt-2 border rounded text-xl" />

@@ -6,24 +6,11 @@ import "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import "hardhat/console.sol";
 
-import "@chainlink/contracts/src/v0.8/interfaces/VRFCoordinatorV2Interface.sol";
-import "@chainlink/contracts/src/v0.8/VRFConsumerBaseV2.sol";
-
-contract FileNFT is ERC721URIStorage, VRFConsumerBaseV2 {
+contract FileNFT is ERC721URIStorage {
     using Counters for Counters.Counter;
     Counters.Counter private _tokenIds;
     Counters.Counter private  _itemsShared;
 
-  VRFCoordinatorV2Interface COORDINATOR;
-  uint64 s_subscriptionId;
-  address vrfCoordinator = 0x2Ca8E0C643bDe4C2E08ab1fA0da3401AdAD7734D;
-  bytes32 keyHash = 0x79d3d8832d904592c0bf9818b621522c988bb8b0c05cdc3b15aea1b6e8db0c15;
-  uint32 callbackGasLimit = 100000;
-  uint16 requestConfirmations = 3;
-  uint32 numWords =  2;
-  uint256[] public s_randomWords;
-  uint256 public s_requestId;
-  address s_owner;
     // address owner;
     uint private monthly_value;
     address private owner;
@@ -52,9 +39,6 @@ contract FileNFT is ERC721URIStorage, VRFConsumerBaseV2 {
     );
 
     constructor() ERC721("Kezayya", "KEZAYYA") {
-    COORDINATOR = VRFCoordinatorV2Interface(vrfCoordinator);
-    s_owner = msg.sender;
-    s_subscriptionId = subscriptionId;
     owner = payable(msg.sender);
       monthly_value = 100000;
     }
@@ -155,24 +139,6 @@ contract FileNFT is ERC721URIStorage, VRFConsumerBaseV2 {
 
         emit MonthlyPaymentMade(msg.sender);
     }
-
-    function requestRandomWords() external onlyOwner {
-    // Will revert if subscription is not set and funded.
-    s_requestId = COORDINATOR.requestRandomWords(
-      keyHash,
-      s_subscriptionId,
-      requestConfirmations,
-      callbackGasLimit,
-      numWords
-    );
-  }
-
-  function fulfillRandomWords(
-    uint256, /* requestId */
-    uint256[] memory randomWords
-  ) internal override {
-    s_randomWords = randomWords;
-  }
 
     function withdraw(uint value) external {
         require(msg.sender == owner, "Address is not the owner");

@@ -60,7 +60,7 @@ const MintFile = () => {
 
   const sendTxToBlockchain = async (metadata) => {
     try {
-      setTxStatus("Adding transaction to Polygon Mumbai Blockchain.");
+      setTxStatus("Adding transaction to BitTorrent Chain (BTTC)..");
       const web3Modal = new Web3Modal();
       const connection = await web3Modal.connect();
       const provider = new ethers.providers.Web3Provider(connection);
@@ -76,7 +76,7 @@ const MintFile = () => {
       await mintNFTTx.wait();
       return mintNFTTx;
     } catch (error) {
-      setErrorMessage("Failed to send tx to Polygon Mumbai.");
+      setErrorMessage("Failed to send tx to BitTorrent Chain (BTTC).");
       console.log(error);
     }
   };
@@ -87,7 +87,7 @@ const MintFile = () => {
     console.log("image ipfs path is", imgViewString);
     setImageView(imgViewString);
     setMetaDataURl(getIPFSGatewayURL(metaData.url));
-    setTxURL(`https://mumbai.polygonscan.com/tx/${mintNFTTx.hash}`);
+    setTxURL(`https://testnet.bttcscan.com/tx/${mintNFTTx.hash}`);
     setTxStatus("File addition was successfully!");
     console.log("File preview completed");
   };
@@ -97,7 +97,7 @@ const MintFile = () => {
     // 1. upload File content via NFT.storage
     const metaData = await uploadNFTContent(uploadedFile);
 
-    // 2. Mint a NFT token on Polygon
+    // 2. Mint a NFT token on BTTC Chain
     const mintNFTTx = await sendTxToBlockchain(metaData);
 
     // 3. preview the minted nft
@@ -132,7 +132,7 @@ const MintFile = () => {
           />
           <br />
 
-          <div className="MintNFT text-black text-xl text-black">
+          <div className="MintNFT text-black text-xl">
             <form>
               <h3>Select a File</h3>
               <input type="file" onChange={handleFileUpload} className="text-black mt-2 border rounded  text-xl" />

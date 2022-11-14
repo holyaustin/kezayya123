@@ -30,12 +30,16 @@ The smart contract uses ERC-721 specification to hold metadata URI, ethers.js wa
 
 Live Dapp on Vercel: - https://kezayya123.vercel.app/
 
-Deployed to Polygon Mumbai: 
-  export const fileShareAddress = "0x6936E43A3f9983875E32C967eB801686d51a6119"
+Deployed to BTTC Chain: 
+  export const fileShareAddress = "0xe078fe7a93017f8e18c1c52e79632d0b94c56c26"
+
+  http://testscan.bt.io/#/contract/0xe078fe7a93017f8e18c1c52e79632d0b94c56c26
+
+  http://testscan.bt.io/#/contract/0xebb3113e97eeaa16dcc2febd6a1617ab731066ae
 
   Valist: https://app.valist.io/holyaustin/kezayya123
  
- Youtube video link: https://youtu.be/4hIymL5lCs0
+ Youtube video link: https://youtu.be/kZvxCGMPci8
 
 ## Getting Started
 

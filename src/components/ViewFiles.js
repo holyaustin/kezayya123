@@ -24,16 +24,8 @@ export default function ViewFiles() {
     loadfileNFT();
   }, []);
 
-  // const rpcUrl = "https://matic-mumbai.chainstacklabs.com";
-  // const rpcUrl = "http://localhost:8545";
-
   async function loadfileNFT() {
-    /* create a generic provider and query for fileNFTs 
-    const provider = new ethers.providers.JsonRpcProvider();
-    const contract = new ethers.Contract(fileShareAddress, fileNFT.abi, provider);
-    const data = await contract.fetchMyNFTs();
-    console.log("fileNFT data fetched from contract", data);
-    */
+
     const web3Modal = new Web3Modal({
       network: 'mainnet',
       cacheProvider: true,
@@ -124,15 +116,13 @@ export default function ViewFiles() {
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-4 pt-4">
           {nfts.map((nft, i) => (
 
-            <div key={i} className="border shadow rounded-xl overflow-hidden border-2 border-white-500">
+            <div key={i} className="shadow rounded-xl overflow-hidden border-2 border-white-500">
               <iframe
                 title="fileNFT"
-                frameBorder="0"
-                scrolling="no"
-                height="200px"
+                height="auto"
                 width="100%"
-                objectFit="cover"
-                src={`${nft.image}#toolbar=0`}
+                objectfit="cover"
+                src={`${nft.image}#toolbar=0&embedded=true`}
                 className="py-3 object-cover h-500"
               />
               <div className="p-1">

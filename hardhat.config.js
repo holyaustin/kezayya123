@@ -8,13 +8,8 @@ module.exports = {
       chainId: 1337
     },
    
-    mumbai: {
-      url: process.env.ALCHEMY_API_KEY, // 'https://rpc-mumbai.matic.today'
-      accounts: [process.env.PRIVATE_KEY],
-    },
-
-    polygon: {
-      url: 'https://polygon-rpc.com', // [process.env.POLYGON_RPC], 
+    bttc: {
+      url: process.env.BTTC_RPC_KEY, // 'https://pre-rpc.bt.io/'
       accounts: [process.env.PRIVATE_KEY],
     },
 
