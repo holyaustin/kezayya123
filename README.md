@@ -14,7 +14,7 @@ Frontend: NextJS, postcss, tailwindcss, Theme
 web3 technologies: IPFS/filecoin, Metamask wallet, Unstoppable domain, Moralis, Tableland, Valist, XMTP, ChainLink
 Backend: Solidity, Node.js
 
-Project subjected to :  
+Blockchain deployed to:  BitTorrent Chain (BTTC)
 
 ## Description
 This project was made using several technologies. The front-end was designed using a server-side-rendering javascript tech known as NextJS. the latest version of Next was used because of how fast it was to build the project.  IPFS / Filecoin's NFT.Storage was used to store user's file on their decentralized storage. Files can be stored individually and as a folder. When Files are stored on IPFS through NFT.Storage, It is retrieved and rendered on users dashboard whenever they are logged in. They can share these files to anyone through a sharing mechansism that is easy to copy out the sharing IPFS URL.
@@ -22,9 +22,8 @@ Tableland saved user's details
 Valist houses the code repository
  Fluence was also employ for P2P File Sharing through their browser ro browser Peer to peer communication technique. The whole world of Fluence was engaing as one browsed through several other case studies. Hope to implemnnbt more of fluence on future projects.
  XMTP is used for wallet to wallet messaging using the XMTP SDK
- Chainlink randomness was also employed.
 
-The smart contract uses ERC-721 specification to hold metadata URI, ethers.js was used to interact with the smart contract. The contract was deployed to Polygon Mumbai blockchain. The project versioning was done with Vialist. The entire project demo was deployed to Spheron. 
+The smart contract uses ERC-721 specification to hold metadata URI, ethers.js was used to interact with the smart contract. The contract was deployed to BTTC blockchain. The project versioning was done with Vialist. The entire project demo was hosted to Vercel. 
 
 ## Live DApp hosted on
 
